@@ -2,6 +2,8 @@
 [![Python](https://img.shields.io/badge/python-3.8-green)](https://www.python.org/doc/versions/)
 [![Colab](https://img.shields.io/badge/Google%20Colab-1.0.0-green)](https://colab.research.google.com/drive/1vYnJcEign6TZ3KaAwijwjvxwPTjbyESV?usp=sharing)
 
+A Chinese number classification AI based on ResNet 9 and ResNet 152.
+
 ## Requirements
 This project is written by Python 3.8.7 . Following packages are need to be installed.
 - tensorflow~=2.4.1
