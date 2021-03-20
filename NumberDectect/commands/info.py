@@ -12,4 +12,5 @@ def info(generate_pic, model_type):
     model = build_model(model_type)
     print(model.summary())
     if generate_pic:
-        plot_model(model, 'Net.png')
+        plot_model(model, model_type + '.png')
+        print('Generated ' + model_type + '.png in working directory.')
