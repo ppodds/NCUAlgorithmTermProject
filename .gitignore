@@ -1,3 +1,5 @@
 .idea
 ChineseNumDataset
 *.hdf5
+test*
+Project

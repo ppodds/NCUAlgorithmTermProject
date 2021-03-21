@@ -3,6 +3,8 @@ import os
 import tensorflow as tf
 from tensorflow.keras import utils
 
+from PIL import Image
+
 
 def get_input_data(folder_name):
     """ Load image file path and label from directory.
@@ -22,6 +24,20 @@ def get_input_data(folder_name):
                 image_paths.append((os.path.join('ChineseNumDataset', folder_name, basedir, label, file_name)))
                 image_label.append(label)
     return image_paths, image_label
+
+
+def normalize_image_format(image_paths):
+    """ Check images format of dataset. If the image format is not equals, changed it.
+
+    Args:
+        image_paths (str): Image paths of a dataset.
+    """
+    for image_path in image_paths:
+        img = Image.open(image_path)
+        if not img.mode == 'P':
+            img = img.convert('P')
+            img.save(image_path)
+            print('Image format has changed:', image_path)
 
 
 class DatasetWrapper:

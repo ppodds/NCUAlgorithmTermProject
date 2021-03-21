@@ -1,6 +1,6 @@
 # NCU Algorithm Team Project (1092)
-[![Python](https://img.shields.io/badge/python-3.8-green)](https://www.python.org/doc/versions/)
-[![Colab](https://img.shields.io/badge/Google%20Colab-1.0.0-green)](https://colab.research.google.com/drive/1vYnJcEign6TZ3KaAwijwjvxwPTjbyESV?usp=sharing)
+[![Python](https://img.shields.io/badge/python-3.8.7-green)](https://www.python.org/doc/versions/)
+[![Colab](https://img.shields.io/badge/Google%20Colab-1.0.1-green)](https://colab.research.google.com/drive/1OspRKKJob_opurnCR-IcOGrCxLRAmp0Z?usp=sharing)
 
 A Chinese number classification AI based on ResNet 9 and ResNet 152.
 
@@ -8,6 +8,8 @@ A Chinese number classification AI based on ResNet 9 and ResNet 152.
 This project is written by Python 3.8.7 . Following packages are need to be installed.
 - tensorflow~=2.4.1
 - pydot>=1.4.2
+- numpy~=1.19.5
+- Pillow~=8.1.2
 
 
 ## Installation
@@ -19,7 +21,7 @@ python -m pip install -r requirements.txt
 
 ## Usage
 
-You can use Google Colab or run at your own computer. [Link](https://colab.research.google.com/drive/1vYnJcEign6TZ3KaAwijwjvxwPTjbyESV?usp=sharing)
+You can use Google Colab or run at your own computer. [Link](https://colab.research.google.com/drive/1OspRKKJob_opurnCR-IcOGrCxLRAmp0Z?usp=sharing)
 If you want to use Colab, you should mount your own google drive (prepare dataset).
 
 If you want to run this in your own computer, you should check your project structure is correct.
