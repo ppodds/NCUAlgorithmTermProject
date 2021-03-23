@@ -1,4 +1,4 @@
-# NCU Algorithm Team Project (1092)
+# NCU Algorithm Term Project (1092)
 [![Python](https://img.shields.io/badge/python-3.8.7-green)](https://www.python.org/doc/versions/)
 [![Colab](https://img.shields.io/badge/Google%20Colab-1.0.1-green)](https://colab.research.google.com/drive/1OspRKKJob_opurnCR-IcOGrCxLRAmp0Z?usp=sharing)
 
