@@ -18,6 +18,7 @@ def get_input_data(folder_name):
     """
     image_paths = []
     image_label = []
+    # 找出所有資料並確認路徑和label
     for basedir in os.listdir(os.path.join('ChineseNumDataset', folder_name)):
         for label in os.listdir(os.path.join('ChineseNumDataset', folder_name, basedir)):
             for file_name in os.listdir(os.path.join('ChineseNumDataset', folder_name, basedir, label)):
@@ -32,6 +33,7 @@ def normalize_image_format(image_paths):
     Args:
         image_paths (str): Image paths of a dataset.
     """
+    # 事前轉檔，統一檔案格式
     for image_path in image_paths:
         img = Image.open(image_path)
         if not img.mode == 'P':
@@ -51,11 +53,15 @@ class DatasetWrapper:
     def get_dataset(self, batch_size):
         """ Get input dataset.
         """
+        # 讀取資料集並轉為dataset物件
         dataset = tf.data.Dataset.from_tensor_slices(self.image_data)
+        # 讀取資料集的圖片
         dataset = dataset.map(self.map_load_image, num_parallel_calls=tf.data.experimental.AUTOTUNE)
+        # 正規化圖片並處理label
         dataset = dataset.map(self.map_transform_image_and_label, num_parallel_calls=tf.data.experimental.AUTOTUNE)
+        # 分出batch
         dataset = dataset.batch(batch_size)
-
+        # 效能優化處理
         dataset = dataset.prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
 
         return dataset
@@ -63,7 +69,9 @@ class DatasetWrapper:
     def map_load_image(self, image_path, label):
         """ Load image from image path and transform to tensor.
         """
+        # 讀取檔案
         image_raw = tf.io.read_file(image_path)
+        # 解析bmp
         image = tf.io.decode_image(image_raw, channels=0)
         return image, label
 
@@ -72,6 +80,7 @@ class DatasetWrapper:
         """
         # 沒有用py_function包裝起來keras.utils.to_categorical就會報錯
         wrapper = tf.py_function(self.map_transform_image_and_label_py, (image, label), (tf.float32, tf.float32))
+        # pyfunction會丟失形狀，ensure_shape可以讓形狀重新被確定
         image = tf.ensure_shape(wrapper[0], [28, 28, 1])
         label = tf.ensure_shape(wrapper[1], [10])
         return image, label

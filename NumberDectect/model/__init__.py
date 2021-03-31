@@ -18,6 +18,7 @@ def build_model(model_type, model_path=None):
         model_type (str): Model type of function generated. Only effective when model_path is None
         model_path (str): Existed model file path. Only accept hdf5 file.
     """
+    # 檢查是否有已訓練好的model，有就直接讀取並建立
     if model_path and os.path.exists(model_path):
         model = models.load_model(model_path)
     else:
@@ -25,6 +26,7 @@ def build_model(model_type, model_path=None):
         optimizer = tf.optimizers.Adam(learning_rate)
 
         inputs = Input(shape=(28, 28, 1))
+        # 確認建立的model種類
         if model_type == "Res152":
             outputs = ResNet.create_resnet152(inputs)
             name = "ResNet152"

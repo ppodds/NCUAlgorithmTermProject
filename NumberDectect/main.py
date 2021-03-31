@@ -6,6 +6,7 @@ from NumberDectect.dataset import *
 from NumberDectect.model import *
 
 tf.compat.v1.enable_eager_execution()
+config = tf.compat.v1.ConfigProto(gpu_options=tf.compat.v1.GPUOptions(allow_growth=True))
 print(f'Tensorflow version: {str(tf.__version__)}')
 print(f"GPU : {str(tf.config.list_physical_devices('GPU'))}")
 
