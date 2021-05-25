@@ -30,9 +30,15 @@ Check your dataset path is correct. The path is strictly required to be correct
 ## Screenshot (Running on Colab)
 
 ### ResNet 9 model
+
+Batch size: 64
+Epochs: 35
 ![](Documents/ResNet9%20Epoch35.png)
 
 ### ResNet 152 model
+
+Batch size: 64
+Epochs: 35
 ![](Documents/ResNet152%20Epoch35.png)
 
 ## Project Structure
@@ -44,6 +50,7 @@ project
 │   requirements.txt    
 │
 └───NumberDectect
+<<<<<<< HEAD
 │   │   main.py
 │   │
 │   │
@@ -68,6 +75,30 @@ project
 │   │   └───layers
 │   │   │  │   __init__.py
 │   │   │  │
+=======
+    │   main.py
+    │
+    │
+    └───ChineseNumDataset
+    │   │   train_image
+    │   │   test_image
+    │
+    └───commands
+    │   │   __init__.py
+    │   │   evaluate.py
+    │   │   info.py
+    │   │   train.py
+    │ 
+    └───dataset
+    │   │   __init__.py
+    │
+    └───model
+        │   __init__.py
+        │   ResNet.py
+        │
+        └───layers
+           │   __init__.py
+>>>>>>> 5605fc8f8270272b3627ec208ef1e06269e93cdf
 ```
 
 ## ResNet Structure
