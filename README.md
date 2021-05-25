@@ -30,10 +30,10 @@ Check your dataset path is correct. The path is strictly required to be correct
 ## Screenshot (Running on Colab)
 
 ### ResNet 9 model
-![](Documents/ResNet9%20Epoch30.png)
+![](Documents/ResNet9%20Epoch35.png)
 
 ### ResNet 152 model
-![](Documents/ResNet152%20Epoch35.JPG)
+![](Documents/ResNet152%20Epoch35.png)
 
 ## Project Structure
 

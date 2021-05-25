@@ -3,3 +3,4 @@ ChineseNumDataset
 *.hdf5
 test*
 Project
+__pycache__

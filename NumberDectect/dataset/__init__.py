@@ -36,8 +36,8 @@ def normalize_image_format(image_paths):
     # 事前轉檔，統一檔案格式
     for image_path in image_paths:
         img = Image.open(image_path)
-        if not img.mode == 'P':
-            img = img.convert('P')
+        if not img.mode == 'L':
+            img = img.convert('L')
             img.save(image_path)
             print('Image format has changed:', image_path)
 
