@@ -49,6 +49,7 @@ project
 │   │
 │   └───ChineseNumDataset
 │   │   │   train_image
+│   │   │   validation_image
 │   │   │   test_image
 │   │
 │   └───commands

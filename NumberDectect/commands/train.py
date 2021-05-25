@@ -1,7 +1,7 @@
 from . import *
 
 
-def train(model_path, model_type, train_data, test_data, epochs):
+def train(model_path, model_type, train_data, validation_data, epochs):
     """ Train model.
 
 
@@ -9,7 +9,7 @@ def train(model_path, model_type, train_data, test_data, epochs):
         model_path (str): Model file path. If the file doesn't exist, it will create a new model, or it will use the existed model.
         model_type (str): Model type. Available: Res152, Res9
         train_data (tuple): Train dataset. Like (x_train, y_train).
-        test_data (tuple): Test dataset. Like (x_test, y_test).
+        validation_data (tuple): Validation dataset. Like (x_validation, y_validation).
         epochs (int):  Train epochs.
     """
     model = build_model(model_type, model_path)
@@ -24,5 +24,5 @@ def train(model_path, model_type, train_data, test_data, epochs):
     model.fit(train_data,
               epochs=epochs,
               verbose=1,
-              validation_data=test_data,
+              validation_data=validation_data,
               callbacks=[checkpoint])

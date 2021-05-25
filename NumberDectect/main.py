@@ -31,15 +31,15 @@ if user_in == '1':
                                    'Note: If you type 0 equals no.\n')))
     print('Preparing dataset... It may take some time...')
     train_data = get_input_data('train_image')
-    test_data = get_input_data('test_image')
+    validation_data = get_input_data('validation_image')
     if check_dataset:
         normalize_image_format(train_data[0])
-        normalize_image_format(test_data[0])
+        normalize_image_format(validation_data[0])
     train_dataset = DatasetWrapper(train_data)
-    test_dataset = DatasetWrapper(test_data)
+    validation_dataset = DatasetWrapper(validation_data)
     train_dataset = train_dataset.get_dataset(batch_size)
-    test_dataset = test_dataset.get_dataset(batch_size)
-    train(model_path, model_type, test_dataset, test_dataset, epochs)
+    validation_dataset = validation_dataset.get_dataset(batch_size)
+    train(model_path, model_type, train_dataset, validation_dataset, epochs)
 elif user_in == '2':
     model_path = input('Model path\n')
     try:
