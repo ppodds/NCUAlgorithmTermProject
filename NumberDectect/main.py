@@ -64,8 +64,10 @@ elif user_in == '3':
 elif user_in == '4':
     print('Checking images format. It may take some time...')
     train_data = get_input_data('train_image')
+    validation_data = get_input_data('validation_image')
     test_data = get_input_data('test_image')
     normalize_image_format(train_data[0])
+    normalize_image_format(validation_data[0])
     normalize_image_format(test_data[0])
     print('Finish!')
 else:
