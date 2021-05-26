@@ -50,31 +50,29 @@ project
 │   requirements.txt    
 │
 └───NumberDectect
-<<<<<<< HEAD
-│   │   main.py
-│   │
-│   │
-│   └───ChineseNumDataset
-│   │   │   train_image
-│   │   │   validation_image
-│   │   │   test_image
-│   │
-│   └───commands
-│   │   │   __init__.py
-│   │   │   evaluate.py
-│   │   │   info.py
-│   │   │   train.py
-│   │ 
-│   └───dataset
-│   │   │   __init__.py
-│   │
-│   └───model
-│   │   │   __init__.py
-│   │   │   ResNet.py
-│   │   │
-│   │   └───layers
-│   │   │  │   __init__.py
-│   │   │  │
+    │   main.py
+    │
+    │
+    └───ChineseNumDataset
+    │   │   train_image
+    │   │   validation_image
+    │   │   test_image
+    │
+    └───commands
+    │   │   __init__.py
+    │   │   evaluate.py
+    │   │   info.py
+    │   │   train.py
+    │ 
+    └───dataset
+    │   │   __init__.py
+    │
+    └───model
+        │   __init__.py
+        │   ResNet.py
+        │
+        └───layers
+           │   __init__.py
 =======
     │   main.py
     │
@@ -98,7 +96,6 @@ project
         │
         └───layers
            │   __init__.py
->>>>>>> 5605fc8f8270272b3627ec208ef1e06269e93cdf
 ```
 
 ## ResNet Structure
