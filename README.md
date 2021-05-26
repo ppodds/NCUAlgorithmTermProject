@@ -73,29 +73,6 @@ project
         │
         └───layers
            │   __init__.py
-=======
-    │   main.py
-    │
-    │
-    └───ChineseNumDataset
-    │   │   train_image
-    │   │   test_image
-    │
-    └───commands
-    │   │   __init__.py
-    │   │   evaluate.py
-    │   │   info.py
-    │   │   train.py
-    │ 
-    └───dataset
-    │   │   __init__.py
-    │
-    └───model
-        │   __init__.py
-        │   ResNet.py
-        │
-        └───layers
-           │   __init__.py
 ```
 
 ## ResNet Structure
