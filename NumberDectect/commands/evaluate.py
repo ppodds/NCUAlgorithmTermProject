@@ -10,4 +10,5 @@ def evaluate_project(model_path, test_data):
         test_data (tuple): Test dataset. Like (x_test, y_test).
     """
     model = build_model(None, model_path)
+    # 用keras的funtion做model的evaluate
     model.evaluate(test_data, verbose=1)
